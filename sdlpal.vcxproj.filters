@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5fb8a8f9-e3e0-47bc-9069-169cab515daa}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{419a6407-1bce-4024-b123-5dd4da5e23bb}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="adplug">
+      <UniqueIdentifier>{03115a26-b3ad-43f5-ae8b-5029ef689d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{00ee67d7-9dbb-42ed-8238-a2226fd0e86e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="native_midi">
+      <UniqueIdentifier>{f3a4dae5-8d13-4d02-ba0f-c5a3b6acb1e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libmad">
+      <UniqueIdentifier>{1e3bd586-dfa2-4acb-8f38-8497f4539508}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="adplug\binfile.cpp">
+      <Filter>adplug</Filter>
+    </ClCompile>
+    <ClCompile Include="adplug\binio.cpp">
+      <Filter>adplug</Filter>
+    </ClCompile>
+    <ClCompile Include="adplug\dosbox_opl.cpp">
+      <Filter>adplug</Filter>
+    </ClCompile>
+    <ClCompile Include="adplug\emuopl.cpp">
+      <Filter>adplug</Filter>
+    </ClCompile>
+    <ClCompile Include="adplug\fmopl.c">
+      <Filter>adplug</Filter>
+    </ClCompile>
+    <ClCompile Include="adplug\fprovide.cpp">
+      <Filter>adplug</Filter>
+    </ClCompile>
+    <ClCompile Include="adplug\player.cpp">
+      <Filter>adplug</Filter>
+    </ClCompile>
+    <ClCompile Include="adplug\rix.cpp">
+      <Filter>adplug</Filter>
+    </ClCompile>
+    <ClCompile Include="adplug\surroundopl.cpp">
+      <Filter>adplug</Filter>
+    </ClCompile>
+    <ClCompile Include="native_midi\native_midi_common.c">
+      <Filter>native_midi</Filter>
+    </ClCompile>
+    <ClCompile Include="native_midi\native_midi_win32.c">
+      <Filter>native_midi</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\bit.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\decoder.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\fixed.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\frame.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\huffman.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\layer12.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\layer3.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\music_mad.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\stream.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\synth.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="libmad\timer.c">
+      <Filter>libmad</Filter>
+    </ClCompile>
+    <ClCompile Include="main\battle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\ending.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\fight.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\font.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\game.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\global.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\input.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\input_PSP.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\itemmenu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\magicmenu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\midi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\palcommon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\palette.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\play.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\res.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\rixplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\rngplay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\scene.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\script.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\sound.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\text.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\ui.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\uibattle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\uigame.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\video.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\yj1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\private.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\aviplay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\enemy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="adplug\binfile.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\binio.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\demuopl.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\dosbox_opl.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\emuopl.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\fmopl.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\fprovide.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\opl.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\player.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\rix.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="adplug\surroundopl.h">
+      <Filter>adplug</Filter>
+    </ClInclude>
+    <ClInclude Include="native_midi\native_midi.h">
+      <Filter>native_midi</Filter>
+    </ClInclude>
+    <ClInclude Include="native_midi\native_midi_common.h">
+      <Filter>native_midi</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\bit.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\decoder.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\fixed.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\frame.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\huffman.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\layer12.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\layer3.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\libmad_config.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\libmad_global.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\mad.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\music_mad.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\stream.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\synth.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="libmad\timer.h">
+      <Filter>libmad</Filter>
+    </ClInclude>
+    <ClInclude Include="main\ascii.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\battle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\big5font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\ending.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\fight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\gbfont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\getopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\itemmenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\magicmenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\main_PSP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\midi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\palcommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\palette.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\play.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\res.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\rixplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\rngplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\script.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\sound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\ui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\uibattle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\uigame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\aviplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sdlpal.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="libmad\D.dat">
+      <Filter>libmad</Filter>
+    </None>
+    <None Include="libmad\imdct_s.dat">
+      <Filter>libmad</Filter>
+    </None>
+    <None Include="libmad\qc_table.dat">
+      <Filter>libmad</Filter>
+    </None>
+    <None Include="libmad\rq_table.dat">
+      <Filter>libmad</Filter>
+    </None>
+    <None Include="libmad\sf_table.dat">
+      <Filter>libmad</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sdlpal.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
