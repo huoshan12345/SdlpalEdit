@@ -30,20 +30,7 @@
 /*
 	define Bits, Bitu, Bit32s, Bit32u, Bit16s, Bit16u, Bit8s, Bit8u here
 */
-
-#ifdef _MSC_VER
-#include <windows.h>
-#define uintptr_t ULONG
-#define intptr_t LONG
-#define uint32_t DWORD
-#define int32_t INT
-#define uint16_t WORD
-#define int16_t SHORT
-#define uint8_t BYTE
-#define int8_t CHAR
-#else
 #include <stdint.h>
-#endif
 
 typedef uintptr_t	Bitu;
 typedef intptr_t	Bits;

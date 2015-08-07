@@ -111,7 +111,7 @@
 #endif // _DEBUG
 
 //#define PAL_WIN95          1 // not valid for now
-#define TITLE "SdlpalEdit - ver 1.1.2 - Build20141213"
+#define TITLE "SdlpalEdit - ver 1.1.2 - Build20150808"
 
 typedef enum tagPlayerRoleID
 {
