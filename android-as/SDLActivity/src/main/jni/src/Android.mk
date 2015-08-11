@@ -9,36 +9,35 @@ SDL_PATH := ../SDL2
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/$(SDL_PATH)/include
 
 LOCAL_SRC_FILES := $(SDL_PATH)/src/main/android/SDL_android_main.c \
-	../../../main/enemy.c \
-	../../../main/battle.c \
-	../../../main/global.c \
-	../../../main/map.c \
-	../../../main/res.c \
-	../../../main/ui.c \
-	../../../main/ending.c \
-	../../../main/input.c \
-	../../../main/rngplay.c \
-	../../../main/uibattle.c \
-	../../../main/fight.c \
-	../../../main/palcommon.c \
-	../../../main/scene.c \
-	../../../main/uigame.c \
-	../../../main/font.c \
-	../../../main/itemmenu.c \
-	../../../main/palette.c \
-	../../../main/script.c \
-	../../../main/util.c \
-	../../../main/game.c \
-	../../../main/magicmenu.c \
-	../../../main/play.c \
-	../../../main/sound.c \
-	../../../main/video.c \
-	../../../main/getopt.c \
-	../../../main/main.c \
-	../../../main/private.c \
-	../../../main/text.c \
-	../../../main/yj1.c \
-	../../../main/rixplay.cpp \
+	../../../battle.c \
+	../../../global.c \
+	../../../map.c \
+	../../../res.c \
+	../../../ui.c \
+	../../../ending.c \
+	../../../input.c \
+	../../../rngplay.c \
+	../../../uibattle.c \
+	../../../fight.c \
+	../../../palcommon.c \
+	../../../scene.c \
+	../../../uigame.c \
+	../../../font.c \
+	../../../itemmenu.c \
+	../../../palette.c \
+	../../../script.c \
+	../../../util.c \
+	../../../game.c \
+	../../../magicmenu.c \
+	../../../play.c \
+	../../../sound.c \
+	../../../video.c \
+	../../../getopt.c \
+	../../../main.c \
+	../../../private.c \
+	../../../text.c \
+	../../../yj1.c \
+	../../../rixplay.cpp \
 	../../../adplug/binfile.cpp \
 	../../../adplug/binio.cpp \
 	../../../adplug/dosbox_opl.cpp \

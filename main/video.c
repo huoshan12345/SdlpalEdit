@@ -38,7 +38,7 @@ static SDL_Texture       *gpBackKeyMessage   = NULL;
 #endif
 
 // The real screen surface
-static SDL_Surface       *gpScreenReal       = NULL;
+SDL_Surface       *gpScreenReal       = NULL;
 
 volatile BOOL g_bRenderPaused = FALSE;
 
