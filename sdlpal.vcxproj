@@ -50,12 +50,12 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>d:\Users\lijing\Documents\projects\sdlpal\sdl\sdl2\SDL2-devel-2.0.3-VC\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>d:\Users\lijing\Documents\projects\sdlpal\sdl\sdl2\SDL2-devel-2.0.3-VC\SDL2-2.0.3\lib\vs2015\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(solutiondir)SDL2-2.0.3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(solutiondir)SDL2-2.0.3\lib\vs2015\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>d:\Users\lijing\Documents\projects\sdlpal\sdl\sdl2\SDL2-devel-2.0.3-VC\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>d:\Users\lijing\Documents\projects\sdlpal\sdl\sdl2\SDL2-devel-2.0.3-VC\SDL2-2.0.3\lib\vs2015\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(solutiondir)SDL2-2.0.3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(solutiondir)SDL2-2.0.3\lib\vs2015\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
