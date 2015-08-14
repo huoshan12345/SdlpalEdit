@@ -1221,7 +1221,7 @@ WORD           wEventObjectID
 			break;
 		}
 
-			// Revive player
+		// Revive player 角色复活
 		case 0x0022:
 		{
 			if (pScript->rgwOperand[0])

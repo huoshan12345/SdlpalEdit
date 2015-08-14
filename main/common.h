@@ -100,6 +100,9 @@
 #define USE_STRCPY_INSTEAD_OF_STRDUP
 #define AVOID_SCRIPT_CRASH
 
+// 1.1.1 - 20150814
+// 出现了“复活后装备造成的有益轮次清零”的bug
+
 #ifdef _WIN32
 #define PAL_HAS_AVI		
 //#define BIG_RESOLUTION //更大的分辨率
