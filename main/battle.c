@@ -546,6 +546,12 @@ VOID
 		TerminateOnError("PAL_LoadBattleBackground(): failed to create surface!");
 	}
 
+#if SDL_VERSION_ATLEAST(2, 0, 0)
+	SDL_SetSurfacePalette(g_Battle.lpBackground, gpScreen->format->palette);
+#else
+	SDL_SetPalette(g_Battle.lpBackground, SDL_PHYSPAL | SDL_LOGPAL, VIDEO_GetPalette(), 0, 256);
+#endif
+
 	//
 	// Load the picture
 	//读取图片

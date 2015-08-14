@@ -186,9 +186,9 @@ WORD		wEnemyIndex
 )
 {
 	int         i, j, PoisonNum;
-	WORD        PoisonID1, PoisonID2;
-	WORD        PoisonLevel1, PoisonLevel2;
-	POISONSTATUS	TempPoison;
+	WORD        wPoisonID1, wPoisonID2;
+	WORD        wPoisonLevel1, wPoisonLevel2;
+	POISONSTATUS	tempPoison;
 
 	WORD wObjectID = g_Battle.rgEnemy[wEnemyIndex].wObjectID;
 	if (wEnemyIndex >= MAX_ENEMIES_IN_TEAM || wObjectID == 0)
@@ -198,8 +198,8 @@ WORD		wEnemyIndex
 
 	for (j = 0, PoisonNum = 0; j < MAX_POISONS; j++)
 	{
-		PoisonID1 = g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonID;
-		if (PoisonID1 == 0)
+		wPoisonID1 = g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonID;
+		if (wPoisonID1 == 0)
 		{
 			g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonID = 0;
 		}
@@ -218,16 +218,16 @@ WORD		wEnemyIndex
 	{
 		for (j = 0; j < MAX_POISONS - i - 1; j++)
 		{
-			PoisonID1 = g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonID;
-			PoisonLevel1 = gpGlobals->g.rgObject[PoisonID1].poison.wPoisonLevel;
-			PoisonID2 = g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j + 1].wPoisonID;
-			PoisonLevel2 = gpGlobals->g.rgObject[PoisonID2].poison.wPoisonLevel;
+			wPoisonID1 = g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonID;
+			wPoisonLevel1 = gpGlobals->g.rgObject[wPoisonID1].poison.wPoisonLevel;
+			wPoisonID2 = g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j + 1].wPoisonID;
+			wPoisonLevel2 = gpGlobals->g.rgObject[wPoisonID2].poison.wPoisonLevel;
 
-			if (PoisonLevel1 < PoisonLevel2)
+			if (wPoisonLevel1 < wPoisonLevel2)
 			{
-				TempPoison = g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j];
+				tempPoison = g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j];
 				g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j] = g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j + 1];
-				g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j + 1] = TempPoison;
+				g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j + 1] = tempPoison;
 			}
 		}
 	}

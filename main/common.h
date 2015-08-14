@@ -32,7 +32,7 @@
 #define ADD_SOME_STATUSES_SUCCESSFULLY_ANYTIME		//为敌人添加状态总是成功（无视巫抗）
 //对已经死亡的玩家不执行中毒脚本
 #define ENEMY_MAX_MOVE						3		//敌人最多行动次数，如果为2则是经典版
-#define MAX_POISON_LEVEL					99		//复活后解除的毒的最高等级，一般为装备技能，如寿葫芦
+#define MAX_POISON_LEVEL					99		//复活后解除的毒的最高等级；99一般为装备技能，如寿葫芦
 //复活后不解除寿葫芦作用
 //在状态中显示寿葫芦
 //当中毒数超过8个时，能完整显示所有
@@ -101,7 +101,8 @@
 #define AVOID_SCRIPT_CRASH
 
 // 1.1.1 - 20150814
-// 出现了“复活后装备造成的有益轮次清零”的bug
+// 出现了“开战后装备有益轮次清零”的bug
+// 幻影林天南开战就变成血角青龙bug
 
 #ifdef _WIN32
 #define PAL_HAS_AVI		
