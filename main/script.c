@@ -1377,8 +1377,8 @@ WORD           wEventObjectID
 			if (g_Battle.fPlayerMoving)
 			{
 				wPlayerRole = gpGlobals->rgParty[g_Battle.wMovingPlayerIndex].wPlayerRole;
-				wPlayerRole = PAL_NEW_CheckAndGetLegalPlayerTarget(wPlayerRole);	//如果
-				wBaseSuccessRate += PAL_New_GetPlayerSorceryResistance(wPlayerRole);//巫抗越高下毒成功率越高
+				wPlayerRole = PAL_NEW_CheckAndGetLegalPlayerTarget(wPlayerRole);	
+				wBaseSuccessRate += PAL_New_GetPlayerSorceryStrength(wPlayerRole);//巫攻越高下毒成功率越高
 			}
 
 #ifdef ADD_SOME_POISONS_SUCCESSFULLY_ANYTIME
@@ -1626,7 +1626,7 @@ WORD           wEventObjectID
 			WORD wNumRound = pScript->rgwOperand[1];
 
 #ifdef ADD_SOME_STATUSES_SUCCESSFULLY_ANYTIME
-			if (wStatusID >= 4)	//有益状态总是成功
+			if (wStatusID >= 4 || pScript->rgwOperand[2] == 0xffff)	//有益状态总是成功
 			{
 				fAlwaysSuccess = TRUE;
 			}
@@ -1666,11 +1666,11 @@ WORD           wEventObjectID
 			wSorceryResistance = PAL_New_GetEnemySorceryResistance(wEventObjectID);
 			fSorceryIsFull = wSorceryResistance >= 100 ? TRUE : FALSE;
 
-			if (g_Battle.fPlayerMoving && !fSorceryIsFull)
+			if (g_Battle.fPlayerMoving)
 			{
 				wPlayerRole = gpGlobals->rgParty[g_Battle.wMovingPlayerIndex].wPlayerRole;
 				wPlayerRole = PAL_NEW_CheckAndGetLegalPlayerTarget(wPlayerRole);	//如果
-				wBaseSuccessRate += PAL_New_GetPlayerSorceryResistance(wPlayerRole);//巫抗越高设置状态成功率越高
+				wBaseSuccessRate += PAL_New_GetPlayerSorceryStrength(wPlayerRole);//巫攻越高设置状态成功率越高
 			}
 
 #ifdef ADD_SOME_STATUSES_SUCCESSFULLY_ANYTIME
@@ -1680,7 +1680,7 @@ WORD           wEventObjectID
 			}
 #endif
 			iSuccessRate = wBaseSuccessRate - wSorceryResistance;
-			if (fAlwaysSuccess || PAL_New_GetTrueByPercentage(iSuccessRate))
+			if (fAlwaysSuccess || !fSorceryIsFull && PAL_New_GetTrueByPercentage(iSuccessRate))
 			{
 				PAL_New_SetEnemyStatus(wEventObjectID, wStatusID, wNumRound);
 			}

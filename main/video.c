@@ -183,6 +183,7 @@ VIDEO_Init(
    //
    // Create texture for overlay.
    //
+#if defined (__IOS__) || defined (__ANDROID__) || defined (__WINPHONE__)
    overlay = SDL_LoadBMP(va("%s%s", PAL_PREFIX, "overlay.bmp"));
    if (overlay != NULL)
    {
@@ -191,6 +192,7 @@ VIDEO_Init(
       SDL_SetTextureAlphaMod(gpTouchOverlay, 120);
       SDL_FreeSurface(overlay);
    }
+#endif
 
 #ifdef __WINPHONE__
    {

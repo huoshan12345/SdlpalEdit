@@ -345,7 +345,7 @@ typedef struct tagPLAYERROLES
 	WORD               rgwElementalResistance[NUM_MAGIC_ELEMENTAL][MAX_PLAYER_ROLES]; // resistance to elemental magics
 	PLAYERS            rgwSorceryResistance;  // 未知属性 //暂时用来作为巫抗
 	PLAYERS            rgwPhysicalResistance; // 未知属性 //暂时用来作为物抗
-	PLAYERS            rgwUnknown4;           // FIXME: ???
+	PLAYERS            rgwSorceryStrength;    // 未知属性 //暂时用来作为巫攻
 	PLAYERS            rgwCoveredBy;          // who will cover me when I am low of HP or not sane
 	WORD               rgwMagic[MAX_PLAYER_MAGICS][MAX_PLAYER_ROLES]; // magics
 	PLAYERS            rgwWalkFrames;         // walk frame (???)
@@ -755,6 +755,11 @@ WORD			wPlayerRole
 
 WORD
 PAL_New_GetPlayerPhysicalResistance(
+WORD			wPlayerRole
+);
+
+WORD
+PAL_New_GetPlayerSorceryStrength(
 WORD			wPlayerRole
 );
 

@@ -656,6 +656,7 @@ VOID
 			{
 				gpGlobals->g.PlayerRoles.rgwPoisonResistance[w] = min(30, max(0, wLevel - 40));
 				gpGlobals->g.PlayerRoles.rgwSorceryResistance[w] = min(30, max(0, wLevel - 40));
+				gpGlobals->g.PlayerRoles.rgwSorceryStrength[w] = min(50, max(0, wLevel - 40));
 				break;
 			}
 

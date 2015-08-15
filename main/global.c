@@ -1573,6 +1573,29 @@ PAL_New_GetPlayerSorceryResistance(
 }
 
 WORD
+PAL_New_GetPlayerSorceryStrength(
+	WORD			wPlayerRole
+	)
+	/*++
+	Purpose:Get the player's resistance to Sorcery, count in the effect of equipments.
+	Parameters:[IN]  wPlayerRole - the player role ID.
+	Return value:The total resistance to Sorcery of the player.
+	--*/
+{
+	WORD       w;
+	int        i;
+
+	w = gpGlobals->g.PlayerRoles.rgwSorceryStrength[wPlayerRole];
+
+	for (i = 0; i <= MAX_PLAYER_EQUIPMENTS; i++)
+	{
+		w += gpGlobals->rgEquipmentEffect[i].rgwSorceryStrength[wPlayerRole];
+	}
+
+	return min(100, w);
+}
+
+WORD
 PAL_GetPlayerElementalResistance(
 	WORD			wPlayerRole,
 	INT				iAttrib

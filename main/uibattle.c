@@ -1799,6 +1799,10 @@ Purpose: 在战斗中显示一些数据。
 		j++;
 		w = PAL_New_GetPlayerSorceryResistance(wPlayerRole);
 		PAL_DrawNumber(w, 3, PAL_XY(startPos + 20 * i, 10 * j), kNumColorYellow, kNumAlignRight);
+
+		j++;
+		w = PAL_New_GetPlayerSorceryStrength(wPlayerRole);
+		PAL_DrawNumber(w, 3, PAL_XY(startPos + 20 * i, 10 * j), kNumColorYellow, kNumAlignRight);
 	}
 
 	//显示我方有益状态的剩余轮次
