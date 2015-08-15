@@ -1626,7 +1626,7 @@ WORD           wEventObjectID
 			WORD wNumRound = pScript->rgwOperand[1];
 
 #ifdef ADD_SOME_STATUSES_SUCCESSFULLY_ANYTIME
-			if (pScript->rgwOperand[2] == 0xffff && wStatusID >= 4)	//有益状态总是成功
+			if (wStatusID >= 4)	//有益状态总是成功
 			{
 				fAlwaysSuccess = TRUE;
 			}
