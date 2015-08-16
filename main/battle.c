@@ -1659,7 +1659,7 @@ BATTLEENEMY			be
 	}
 
 	//根据我方角色的最低等级调整敌人血量
-	if (max(0, wLevel - be.e.wLevel) >= 10)
+	if (wLevel >= be.e.wLevel + 10)
 	{
 		dwTempLevel = wLevel - 10;
 		if (gpGlobals->wMaxPartyMemberIndex != 0)
@@ -1667,14 +1667,14 @@ BATTLEENEMY			be
 			dwTempHp = PAL_New_EstimateEnemyHealthByLevel(dwTempLevel) * 0.2;
 			fHPPerLevel = min(150, be.e.wHealth / (FLOAT)max(1, be.e.wLevel));
 			fHPPerLevel = max(fHPPerLevel, min(150, be.e.wExp / (FLOAT)max(1, be.e.wLevel) * 10));
-			dwTempHp += fHPPerLevel * dwTempLevel * 0.8;
+			dwTempHp += fHPPerLevel * dwTempLevel * 0.6;
 		}
 		else
 		{
 			dwTempHp = PAL_New_EstimateEnemyHealthByLevel(dwTempLevel) * 0.2;
 			fHPPerLevel = min(100, be.e.wHealth / (FLOAT)max(1, be.e.wLevel));
 			fHPPerLevel = max(fHPPerLevel, min(100, be.e.wExp / (FLOAT)max(1, be.e.wLevel) * 10));
-			dwTempHp += fHPPerLevel * dwTempLevel * 0.6;
+			dwTempHp += fHPPerLevel * dwTempLevel * 0.4;
 		}
 		dwTempHp = max(be.dwActualHealth, dwTempHp);
 		fTimes = dwTempHp / (FLOAT)(be.e.wHealth + 1);
@@ -1698,7 +1698,7 @@ BATTLEENEMY			be
 	be.dwActualHealth += gpGlobals->bFinishGameTime * 2000 * (1 + gpGlobals->wMaxPartyMemberIndex / 5.0);
 	be.e.wExp += gpGlobals->bFinishGameTime * 1000;
 	be.e.wCollectValue = (be.e.wCollectValue == 0) ? 0 : (be.e.wCollectValue + gpGlobals->bFinishGameTime);
-	be.e.wLevel = max(gpGlobals->bFinishGameTime * 100 + wOriginLevel, dwTempLevel);
+	be.e.wLevel = max(gpGlobals->bFinishGameTime * 90 + wOriginLevel, dwTempLevel);
 #endif 
 
 

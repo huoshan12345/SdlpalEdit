@@ -1813,7 +1813,7 @@ Purpose: 在战斗中显示一些数据。
 		{
 			w = gpGlobals->rgPlayerStatus[wPlayerRole][j];
 			PAL_DrawNumber(min(99, w), 3, PAL_XY(startPos + 20 * i,
-				75 + 10 * (j - kStatusPuppet)), kNumColorYellow, kNumAlignRight);
+				85 + 10 * (j - kStatusPuppet)), kNumColorYellow, kNumAlignRight);
 		}
 	}
 

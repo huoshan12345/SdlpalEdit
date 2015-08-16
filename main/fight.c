@@ -24,16 +24,16 @@
 
 BOOL
 PAL_IsPlayerDying(
-WORD		wPlayerRole
-)
-/*++
-  功能：    Check if the player is dying.
-  检查角色是否濒死了
-  参数：    [IN]  wPlayerRole - the player role ID.
-  角色id
-  返回值：  TRUE if the player is dying, FALSE if not.
-  濒死返回TRUE，否则返回FALSE
-  --*/
+	WORD		wPlayerRole
+	)
+	/*++
+	  功能：    Check if the player is dying.
+	  检查角色是否濒死了
+	  参数：    [IN]  wPlayerRole - the player role ID.
+	  角色id
+	  返回值：  TRUE if the player is dying, FALSE if not.
+	  濒死返回TRUE，否则返回FALSE
+	  --*/
 {
 	return gpGlobals->g.PlayerRoles.rgwHP[wPlayerRole] < gpGlobals->g.PlayerRoles.rgwMaxHP[wPlayerRole] / 5
 		&& gpGlobals->g.PlayerRoles.rgwHP[wPlayerRole] < 200;
@@ -73,18 +73,18 @@ INT PAL_BattleSelectAutoTarget(VOID)
 
 static INT
 PAL_CalcBaseDamage(
-WORD wAttackStrength,
-WORD wDefense
-)
-/*++
-  功能：    Calculate the base damage value of attacking.
-  计算基础伤害值
-  参数：    [IN]  wAttackStrength - attack strength of attacker.
-  [IN]  wDefense - defense value of inflictor.
-  攻击者武术值，被攻击者防御值
-  返回值：   The base damage value of the attacking.
-  基础伤害值
-  --*/
+	WORD wAttackStrength,
+	WORD wDefense
+	)
+	/*++
+	  功能：    Calculate the base damage value of attacking.
+	  计算基础伤害值
+	  参数：    [IN]  wAttackStrength - attack strength of attacker.
+	  [IN]  wDefense - defense value of inflictor.
+	  攻击者武术值，被攻击者防御值
+	  返回值：   The base damage value of the attacking.
+	  基础伤害值
+	  --*/
 {
 	INT            iDamage;
 
@@ -128,24 +128,24 @@ WORD wDefense
 
 static INT
 PAL_CalcMagicDamage(
-WORD			wMagicStrength,
-WORD			wDefense,
-SHORT			sElementalResistance[NUM_MAGIC_ELEMENTAL],
-SHORT			sPoisonResistance,
-WORD			wMagicID
-)
-/*++
-	功能：     Calculate the damage of magic.
-	计算法术伤害值
-	参数：     [IN]  wMagicStrength - magic strength of attacker.
-	[IN]  wDefense - defense value of inflictor.
-	[IN]  rgwElementalResistance - inflictor's resistance to the elemental magics.
-	[IN]  wPoisonResistance - inflictor's resistance to poison.
-	[IN]  wMagicID - object ID of the magic.
-	攻击者灵力值，被攻击者防御值，被攻击者对各属性伤害的抗性，被攻击者毒抗，法术id
-	返回值： The damage value of the magic attack.
-	法术伤害值
-	--*/
+	WORD			wMagicStrength,
+	WORD			wDefense,
+	SHORT			sElementalResistance[NUM_MAGIC_ELEMENTAL],
+	SHORT			sPoisonResistance,
+	WORD			wMagicID
+	)
+	/*++
+		功能：     Calculate the damage of magic.
+		计算法术伤害值
+		参数：     [IN]  wMagicStrength - magic strength of attacker.
+		[IN]  wDefense - defense value of inflictor.
+		[IN]  rgwElementalResistance - inflictor's resistance to the elemental magics.
+		[IN]  wPoisonResistance - inflictor's resistance to poison.
+		[IN]  wMagicID - object ID of the magic.
+		攻击者灵力值，被攻击者防御值，被攻击者对各属性伤害的抗性，被攻击者毒抗，法术id
+		返回值： The damage value of the magic attack.
+		法术伤害值
+		--*/
 {
 	INT             iDamage;
 	WORD            wElem;
@@ -214,20 +214,20 @@ WORD			wMagicID
 
 static INT
 PAL_CalcPhysicalAttackDamage(
-WORD           wAttackStrength,
-WORD           wDefense,
-WORD           wAttackResistance
-)
-/*++
-  功能：    Calculate the damage value of physical attacking.
-  计算物理攻击伤害值
-  参数：    [IN]  wAttackStrength - attack strength of attacker.
-  [IN]  wDefense - defense value of inflictor.
-  [IN]  wAttackResistance - inflictor's resistance to physical attack.
-  攻击者武术值，被攻击者防御值，被攻击者物抗
-  返回值：    The damage value of the physical attacking.
-  物理攻击伤害值
-  --*/
+	WORD           wAttackStrength,
+	WORD           wDefense,
+	WORD           wAttackResistance
+	)
+	/*++
+	  功能：    Calculate the damage value of physical attacking.
+	  计算物理攻击伤害值
+	  参数：    [IN]  wAttackStrength - attack strength of attacker.
+	  [IN]  wDefense - defense value of inflictor.
+	  [IN]  wAttackResistance - inflictor's resistance to physical attack.
+	  攻击者武术值，被攻击者防御值，被攻击者物抗
+	  返回值：    The damage value of the physical attacking.
+	  物理攻击伤害值
+	  --*/
 {
 	INT             iDamage;
 
@@ -243,16 +243,16 @@ WORD           wAttackResistance
 
 static WORD
 PAL_GetPlayerActualDexterity(
-WORD			wPlayerRole
-)
-/*++
-  功能：    Get player's actual dexterity value in battle.
-  获得在战斗中角色的实际的身法值
-  参数：    [IN]  wPlayerRole - the player role ID.
-  角色id
-  返回值：    The player's actual dexterity value.
-  角色的实际的身法值
-  --*/
+	WORD			wPlayerRole
+	)
+	/*++
+	  功能：    Get player's actual dexterity value in battle.
+	  获得在战斗中角色的实际的身法值
+	  参数：    [IN]  wPlayerRole - the player role ID.
+	  角色id
+	  返回值：    The player's actual dexterity value.
+	  角色的实际的身法值
+	  --*/
 {
 	WORD wDexterity = PAL_GetPlayerDexterity(wPlayerRole);
 
@@ -298,8 +298,8 @@ WORD			wPlayerRole
 
 static WORD
 PAL_GetEnemyActualDexterity(
-WORD			wEnemyIndex
-)
+	WORD			wEnemyIndex
+	)
 {
 	WORD wDexterity = PAL_New_GetEnemyDexterity(wEnemyIndex);
 	return wDexterity;
@@ -363,19 +363,19 @@ FLOAT PAL_GetTimeChargingSpeed(WORD wDexterity)
 
 VOID
 PAL_BattleDelay(
-WORD       wDuration,
-WORD       wObjectID,
-BOOL       fUpdateGesture
-)
-/*++
-  功能：    Delay a while during battle.
-  当战斗时延迟一段时间
-  参数：    [IN]  wDuration - Number of frames of the delay.
-  [IN]  wObjectID - The object ID to be displayed during the delay.
-  [IN]  fUpdateGesture - TRUE if update the gesture for enemies, FALSE if not.
-  延迟帧数，延迟时需要显示的对象id，更新敌人动作（更新为真，否则为假）
-  返回值：    None.
-  --*/
+	WORD       wDuration,
+	WORD       wObjectID,
+	BOOL       fUpdateGesture
+	)
+	/*++
+	  功能：    Delay a while during battle.
+	  当战斗时延迟一段时间
+	  参数：    [IN]  wDuration - Number of frames of the delay.
+	  [IN]  wObjectID - The object ID to be displayed during the delay.
+	  [IN]  fUpdateGesture - TRUE if update the gesture for enemies, FALSE if not.
+	  延迟帧数，延迟时需要显示的对象id，更新敌人动作（更新为真，否则为假）
+	  返回值：    None.
+	  --*/
 {
 	int    i, j;
 	DWORD  dwTime = SDL_GetTicks() + BATTLE_FRAME_TIME;
@@ -454,14 +454,14 @@ BOOL       fUpdateGesture
 
 VOID
 PAL_BattleBackupStat(
-VOID
-)
-/*++
-  功能：    Backup HP and MP values of all players and enemies.
-  备份角色和敌人的hp和mp
-  参数：    None.
-  返回值：  None.
-  --*/
+	VOID
+	)
+	/*++
+	  功能：    Backup HP and MP values of all players and enemies.
+	  备份角色和敌人的hp和mp
+	  参数：    None.
+	  返回值：  None.
+	  --*/
 {
 	int          i;
 	WORD         wPlayerRole;
@@ -488,15 +488,15 @@ VOID
 
 BOOL
 PAL_BattleDisplayStatChange(
-VOID
-)
-/*++
-  功能：    Display the HP and MP changes of all players and enemies.
-  展示角色和敌人的hp和mp改变值
-  参数：    None.
-  返回值：  TRUE if there are any number displayed, FALSE if not.
-  如果有显示数字返回真，否则返回假
-  --*/
+	VOID
+	)
+	/*++
+	  功能：    Display the HP and MP changes of all players and enemies.
+	  展示角色和敌人的hp和mp改变值
+	  参数：    None.
+	  返回值：  TRUE if there are any number displayed, FALSE if not.
+	  如果有显示数字返回真，否则返回假
+	  --*/
 {
 	int      i, x, y;
 	INT      sDamage;
@@ -584,13 +584,13 @@ VOID
 
 static VOID
 PAL_BattlePostActionCheck(
-BOOL fCheckPlayers
-)
-/*++
-  功能：    Essential checks after an action is executed.
-  参数：    [IN]  fCheckPlayers - TRUE if check for players, FALSE if not.
-  返回值：    None.
-  --*/
+	BOOL fCheckPlayers
+	)
+	/*++
+	  功能：    Essential checks after an action is executed.
+	  参数：    [IN]  fCheckPlayers - TRUE if check for players, FALSE if not.
+	  返回值：    None.
+	  --*/
 {
 	int      i, j;
 	BOOL     fFade = FALSE;
@@ -759,13 +759,13 @@ end:
 
 VOID
 PAL_BattleUpdateFighters(
-VOID
-)
-/*++
-  功能：    Update players' and enemies' gestures and locations in battle.
-  参数：    None.
-  返回值：  None.
-  --*/
+	VOID
+	)
+	/*++
+	  功能：    Update players' and enemies' gestures and locations in battle.
+	  参数：    None.
+	  返回值：  None.
+	  --*/
 {
 	int        i;
 	WORD       wPlayerRole;
@@ -1053,8 +1053,8 @@ VOID PAL_BattleStartFrame(VOID)
 
 					g_Battle.rgEnemy[i].fDualMove =
 						(!g_Battle.rgEnemy[i].fFirstMoveDone &&
-						(g_Battle.rgEnemy[i].e.wDualMove >= 2 ||
-						(g_Battle.rgEnemy[i].e.wDualMove != 0 && RandomLong(0, 1))));
+							(g_Battle.rgEnemy[i].e.wDualMove >= 2 ||
+								(g_Battle.rgEnemy[i].e.wDualMove != 0 && RandomLong(0, 1))));
 
 					PAL_BattleEnemyPerformAction(i);
 
@@ -1474,8 +1474,8 @@ VOID PAL_BattleStartFrame(VOID)
 						iExtraPoisonMPDamage = max(iExtraPoisonMPDamage, 0);
 						iExtraPoisonDamage *= gpGlobals->rgPoisonStatus[j][i].wPoisonIntensity / 4.0;
 						iExtraPoisonMPDamage *= gpGlobals->rgPoisonStatus[j][i].wPoisonIntensity / 4.0;
-						iExtraPoisonDamage = min(iExtraPoisonDamage, 32767);
-						iExtraPoisonMPDamage = min(iExtraPoisonMPDamage, 32767);
+						iExtraPoisonDamage = min(iExtraPoisonDamage, MAX_DAMAGE);
+						iExtraPoisonMPDamage = min(iExtraPoisonMPDamage, MAX_DAMAGE);
 						PAL_IncreaseHPMP(wPlayerRole, -(SHORT)iExtraPoisonDamage, -(SHORT)iExtraPoisonMPDamage);
 #else
 						gpGlobals->rgPoisonStatus[j][i].wPoisonScript =
@@ -1509,16 +1509,18 @@ VOID PAL_BattleStartFrame(VOID)
 				PAL_New_SortPoisonsForEnemyByLevel(i);
 				for (j = 0; j < MAX_POISONS; j++)
 				{
-					if (g_Battle.rgEnemy[i].rgPoisons[j].wPoisonID != 0)
+					WORD wPoisonID = g_Battle.rgEnemy[i].rgPoisons[j].wPoisonID;
+					if (wPoisonID != 0)
 					{
 #ifdef POISON_STATUS_EXPAND
 						dwPrevHP = g_Battle.rgEnemy[i].dwActualHealth;
 						g_Battle.rgEnemy[i].rgPoisons[j].wPoisonScript =
 							PAL_RunTriggerScript(g_Battle.rgEnemy[i].rgPoisons[j].wPoisonScript, (WORD)i);
 						iExtraPoisonDamage = dwPrevHP - g_Battle.rgEnemy[i].dwActualHealth;
-						if (iExtraPoisonDamage > 0)
+						WORD wPoisonIntensity = g_Battle.rgEnemy[i].rgPoisons[j].wPoisonIntensity;
+						if (iExtraPoisonDamage > 0 && wPoisonIntensity > 0)
 						{
-							iExtraPoisonDamage *= g_Battle.rgEnemy[i].rgPoisons[j].wPoisonIntensity / 2.0;
+							iExtraPoisonDamage *= wPoisonIntensity;
 							iExtraPoisonDamage = min(iExtraPoisonDamage, g_Battle.rgEnemy[i].dwActualHealth);
 							g_Battle.rgEnemy[i].dwActualHealth -= iExtraPoisonDamage;
 						}
@@ -1526,10 +1528,10 @@ VOID PAL_BattleStartFrame(VOID)
 						g_Battle.rgEnemy[i].rgPoisons[j].wPoisonScript =
 							PAL_RunTriggerScript(g_Battle.rgEnemy[i].rgPoisons[j].wPoisonScript, (WORD)i);
 #endif
+						}
 					}
-				}
 				PAL_New_SortPoisonsForEnemyByLevel(i);
-			}
+				}
 
 			PAL_BattlePostActionCheck(FALSE);
 			if (PAL_BattleDisplayStatChange())
@@ -1569,7 +1571,7 @@ VOID PAL_BattleStartFrame(VOID)
 
 			// Proceed to next turn...
 			g_Battle.Phase = kBattlePhaseSelectAction;
-		}
+			}
 		else
 		{
 			i = g_Battle.ActionQueue[g_Battle.iCurAction].wIndex;
@@ -1620,7 +1622,7 @@ VOID PAL_BattleStartFrame(VOID)
 
 			g_Battle.iCurAction++;
 		}
-	}
+		}
 
 	// The R and F keys and Fleeing should affect all players
 	if (g_Battle.UI.MenuState == kBattleMenuMain &&
@@ -1653,7 +1655,7 @@ VOID PAL_BattleStartFrame(VOID)
 	PAL_BattleUIUpdate();
 
 #endif
-}
+	}
 
 VOID PAL_BattleCommitAction(BOOL fRepeat)
 /*++
@@ -1820,21 +1822,21 @@ VOID PAL_BattleCommitAction(BOOL fRepeat)
 	else
 	{
 		g_Battle.rgPlayer[g_Battle.UI.wCurPlayerIndex].sTurnOrder = -1;
-	}
+}
 #endif
 }
 
 static VOID
 PAL_BattleShowPlayerAttackAnim(
-WORD		wPlayerIndex,
-BOOL		fCritical
-)
-/*++
-  功能：  Show the physical attack effect for player.
-  参数：  [IN]  wPlayerIndex - the index of the player.
-  [IN]		fCritical - TRUE if this is a critical hit.
-  返回值：  None.
-  --*/
+	WORD		wPlayerIndex,
+	BOOL		fCritical
+	)
+	/*++
+	  功能：  Show the physical attack effect for player.
+	  参数：  [IN]  wPlayerIndex - the index of the player.
+	  [IN]		fCritical - TRUE if this is a critical hit.
+	  返回值：  None.
+	  --*/
 {
 	WORD wPlayerRole = gpGlobals->rgParty[wPlayerIndex].wPlayerRole;
 	SHORT sTarget = g_Battle.rgPlayer[wPlayerIndex].action.sTarget;
@@ -1985,7 +1987,7 @@ BOOL		fCritical
 		{
 			g_Battle.rgPlayer[wPlayerIndex].pos =
 				PAL_XY(PAL_X(g_Battle.rgPlayer[wPlayerIndex].pos) + 2,
-				PAL_Y(g_Battle.rgPlayer[wPlayerIndex].pos) + 1);
+					PAL_Y(g_Battle.rgPlayer[wPlayerIndex].pos) + 1);
 		}
 	}
 
@@ -2033,28 +2035,28 @@ BOOL		fCritical
 
 static VOID
 PAL_BattleShowPlayerUseItemAnim(
-WORD         wPlayerIndex,
-WORD         wObjectID,
-SHORT        sTarget
-)
-/*++
-  功能：
+	WORD         wPlayerIndex,
+	WORD         wObjectID,
+	SHORT        sTarget
+	)
+	/*++
+	  功能：
 
-  Show the "use item" effect for player.
+	  Show the "use item" effect for player.
 
-  参数：
+	  参数：
 
-  [IN]  wPlayerIndex - the index of the player.
+	  [IN]  wPlayerIndex - the index of the player.
 
-  [IN]  wObjectID - the object ID of the item to be used.
+	  [IN]  wObjectID - the object ID of the item to be used.
 
-  [IN]  sTarget - the target player of the action.
+	  [IN]  sTarget - the target player of the action.
 
-  返回值：
+	  返回值：
 
-  None.
+	  None.
 
-  --*/
+	  --*/
 {
 	int i, j;
 
@@ -2062,7 +2064,7 @@ SHORT        sTarget
 
 	g_Battle.rgPlayer[wPlayerIndex].pos =
 		PAL_XY(PAL_X(g_Battle.rgPlayer[wPlayerIndex].pos) - 15,
-		PAL_Y(g_Battle.rgPlayer[wPlayerIndex].pos) - 7);
+			PAL_Y(g_Battle.rgPlayer[wPlayerIndex].pos) - 7);
 
 	g_Battle.rgPlayer[wPlayerIndex].wCurrentFrame = 5;
 
@@ -2106,22 +2108,22 @@ SHORT        sTarget
 #ifdef PAL_WIN95
 VOID
 PAL_BattleShowPlayerPreMagicAnim(
-WORD         wPlayerIndex,
-WORD         wObjectID
-)
+	WORD         wPlayerIndex,
+	WORD         wObjectID
+	)
 #else
 VOID
 PAL_BattleShowPlayerPreMagicAnim(
-WORD         wPlayerIndex,
-BOOL         fSummon
-)
+	WORD         wPlayerIndex,
+	BOOL         fSummon
+	)
 #endif
-/*++
-  功能：    Show the effect for player before using a magic.
-  参数：    [IN]  wPlayerIndex - the index of the player.
-  [IN]  fSummon - TRUE if player is using a summon magic.
-  返回值：    None.
-  --*/
+	/*++
+	  功能：    Show the effect for player before using a magic.
+	  参数：    [IN]  wPlayerIndex - the index of the player.
+	  [IN]  fSummon - TRUE if player is using a summon magic.
+	  返回值：    None.
+	  --*/
 {
 	int   i, j;
 	DWORD dwTime = SDL_GetTicks();
@@ -2138,7 +2140,7 @@ BOOL         fSummon
 	{
 		g_Battle.rgPlayer[wPlayerIndex].pos =
 			PAL_XY(PAL_X(g_Battle.rgPlayer[wPlayerIndex].pos) - (4 - i),
-			PAL_Y(g_Battle.rgPlayer[wPlayerIndex].pos) - (4 - i) / 2);
+				PAL_Y(g_Battle.rgPlayer[wPlayerIndex].pos) - (4 - i) / 2);
 
 		PAL_BattleDelay(1, 0, TRUE);
 	}
@@ -2223,18 +2225,18 @@ BOOL         fSummon
 
 static VOID
 PAL_BattleShowPlayerDefMagicAnim(
-WORD         wPlayerIndex,
-WORD         wObjectID,
-SHORT        sTarget
-)
-/*++
-  功能：    Show the defensive magic effect for player.
+	WORD         wPlayerIndex,
+	WORD         wObjectID,
+	SHORT        sTarget
+	)
+	/*++
+	  功能：    Show the defensive magic effect for player.
 
-  参数：    [IN]  wPlayerIndex - the index of the player.
-  [IN]  wObjectID - the object ID of the magic to be used.
-  [IN]  sTarget - the target player of the action.
-  返回值：    None.
-  --*/
+	  参数：    [IN]  wPlayerIndex - the index of the player.
+	  [IN]  wObjectID - the object ID of the magic to be used.
+	  [IN]  sTarget - the target player of the action.
+	  返回值：    None.
+	  --*/
 {
 	LPSPRITE   lpSpriteEffect;
 	int        l, iMagicNum, iEffectNum, n, i, j, x, y;
@@ -2384,26 +2386,26 @@ SHORT        sTarget
 #ifndef PAL_WIN95
 static VOID
 PAL_BattleShowPlayerOffMagicAnim(
-WORD         wPlayerIndex,
-WORD         wObjectID,
-SHORT        sTarget
-)
+	WORD         wPlayerIndex,
+	WORD         wObjectID,
+	SHORT        sTarget
+	)
 #else
 static VOID
 PAL_BattleShowPlayerOffMagicAnim(
-WORD         wPlayerIndex,
-WORD         wObjectID,
-SHORT        sTarget,
-BOOL         fSummon
-)
+	WORD         wPlayerIndex,
+	WORD         wObjectID,
+	SHORT        sTarget,
+	BOOL         fSummon
+	)
 #endif
-/*++
-  功能：    Show the offensive magic animation for player.
-  参数：    [IN]  wPlayerIndex - the index of the player.
-  [IN]  wObjectID - the object ID of the magic to be used.
-  [IN]  sTarget - the target enemy of the action.
-  返回值：    None.
-  --*/
+	/*++
+	  功能：    Show the offensive magic animation for player.
+	  参数：    [IN]  wPlayerIndex - the index of the player.
+	  [IN]  wObjectID - the object ID of the magic to be used.
+	  [IN]  sTarget - the target enemy of the action.
+	  返回值：    None.
+	  --*/
 {
 	LPSPRITE   lpSpriteEffect;
 	int        l, iMagicNum, iEffectNum, n, i, k, x, y, wave, blow;
@@ -2419,7 +2421,7 @@ BOOL         fSummon
 		0x0188, //火龙掌
 		0x018a, //魔掌天下
 		0x018d, //群魔乱舞
-	};
+};
 #endif
 
 	iMagicNum = gpGlobals->g.rgObject[wObjectID].magic.wMagicNumber;
@@ -2436,7 +2438,7 @@ BOOL         fSummon
 		{
 			bRotateMagicAnim = TRUE;
 			break;
-		}
+}
 	}
 #endif
 
@@ -2565,7 +2567,7 @@ BOOL         fSummon
 			else
 			{
 				PAL_NEW_RLEBlitToSurfaceRotately(b, gpScreen, PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
-			}
+		}
 #else
 			PAL_RLEBlitToSurface(b, gpScreen, PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
 #endif
@@ -2584,7 +2586,7 @@ BOOL         fSummon
 				{
 					PAL_NEW_RLEBlitToSurfaceRotately(b, g_Battle.lpBackground,
 						PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
-				}
+	}
 #else
 				PAL_RLEBlitToSurface(b, g_Battle.lpBackground,
 					PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
@@ -2616,7 +2618,7 @@ BOOL         fSummon
 				{
 					PAL_NEW_RLEBlitToSurfaceRotately(b, gpScreen,
 						PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
-				}
+			}
 #else
 				PAL_RLEBlitToSurface(b, gpScreen, PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
 #endif
@@ -2634,7 +2636,7 @@ BOOL         fSummon
 					{
 						PAL_NEW_RLEBlitToSurfaceRotately(b, g_Battle.lpBackground,
 							PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
-					}
+		}
 #else
 					PAL_RLEBlitToSurface(b, g_Battle.lpBackground,
 						PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
@@ -2671,7 +2673,7 @@ BOOL         fSummon
 			{
 				PAL_NEW_RLEBlitToSurfaceRotately(b, gpScreen,
 					PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
-			}
+		}
 #else
 			PAL_RLEBlitToSurface(b, gpScreen, PAL_XY(x - PAL_RLEGetWidth(b) / 2, y - PAL_RLEGetHeight(b)));
 #endif
@@ -3580,7 +3582,7 @@ VOID PAL_BattlePlayerPerformAction(WORD wPlayerIndex)
 
 				g_Battle.rgPlayer[sTarget].pos =
 					PAL_XY(PAL_X(g_Battle.rgPlayer[sTarget].pos) - 12,
-					PAL_Y(g_Battle.rgPlayer[sTarget].pos) - 6);
+						PAL_Y(g_Battle.rgPlayer[sTarget].pos) - 6);
 				PAL_BattleDelay(1, 0, TRUE);
 
 				g_Battle.rgPlayer[sTarget].iColorShift = 6;
@@ -3621,7 +3623,7 @@ VOID PAL_BattlePlayerPerformAction(WORD wPlayerIndex)
 				PAL_BattleShowPlayerPreMagicAnim(wPlayerIndex, TRUE);
 #endif
 				PAL_BattleShowPlayerSummonMagicAnim((WORD)-1, wObject);
-			}
+		}
 			else
 			{
 				for (i = 1; i <= 6; i++)
@@ -3790,7 +3792,7 @@ VOID PAL_BattlePlayerPerformAction(WORD wPlayerIndex)
 				}
 			}
 			break;
-		}
+	}
 
 		case kBattleActionDefend:
 		{
@@ -3971,7 +3973,7 @@ VOID PAL_BattlePlayerPerformAction(WORD wPlayerIndex)
 #else
 						PAL_BattleShowPlayerOffMagicAnim(wPlayerIndex, wObject, sTarget);
 #endif
-					}
+				}
 
 					if (sTarget == -1)
 					{
@@ -3981,9 +3983,9 @@ VOID PAL_BattlePlayerPerformAction(WORD wPlayerIndex)
 #else
 						gpGlobals->g.rgObject[wObject].magic.wScriptOnSuccess =
 							PAL_RunTriggerScript(gpGlobals->g.rgObject[wObject].magic.wScriptOnSuccess,
-							gpGlobals->rgParty[wPlayerIndex].wPlayerRole);
+								gpGlobals->rgParty[wPlayerIndex].wPlayerRole);
 #endif
-					}
+			}
 					else
 					{
 						gpGlobals->g.rgObject[wObject].magic.wScriptOnSuccess =
@@ -3991,8 +3993,8 @@ VOID PAL_BattlePlayerPerformAction(WORD wPlayerIndex)
 					}
 					str = PAL_GetPlayerMagicStrength(wPlayerRole);
 					PAL_New_ApplyMagicDamageToEnemy(sTarget, str, wObject, TRUE);// Inflict damage to enemies
-				}
-			}
+		}
+}
 
 			PAL_BattleDisplayStatChange();
 			PAL_BattleShowPostMagicAnim();
@@ -4022,7 +4024,7 @@ VOID PAL_BattlePlayerPerformAction(WORD wPlayerIndex)
 			{
 				g_Battle.rgPlayer[wPlayerIndex].pos =
 					PAL_XY(PAL_X(g_Battle.rgPlayer[wPlayerIndex].pos) - (4 - i),
-					PAL_Y(g_Battle.rgPlayer[wPlayerIndex].pos) - (4 - i) / 2);
+						PAL_Y(g_Battle.rgPlayer[wPlayerIndex].pos) - (4 - i) / 2);
 
 				PAL_BattleDelay(1, 0, TRUE);
 			}
@@ -4077,10 +4079,10 @@ VOID PAL_BattlePlayerPerformAction(WORD wPlayerIndex)
 			gpGlobals->g.rgObject[wObject].item.wScriptOnUse =
 #ifndef EDIT_SCRIT_EVENTOBJECTID_WHEN_ITIS_0XFFFF
 				PAL_RunTriggerScript(gpGlobals->g.rgObject[wObject].item.wScriptOnUse,
-				(sTarget == -1) ? 0xFFFF : gpGlobals->rgParty[sTarget].wPlayerRole);
+					(sTarget == -1) ? 0xFFFF : gpGlobals->rgParty[sTarget].wPlayerRole);
 #else
 				PAL_RunTriggerScript(gpGlobals->g.rgObject[wObject].item.wScriptOnUse,
-				(sTarget == -1) ? gpGlobals->rgParty[wPlayerIndex].wPlayerRole : gpGlobals->rgParty[sTarget].wPlayerRole);
+					(sTarget == -1) ? gpGlobals->rgParty[wPlayerIndex].wPlayerRole : gpGlobals->rgParty[sTarget].wPlayerRole);
 #endif
 			//
 			// Remove the item if the item is consuming
@@ -4104,12 +4106,12 @@ VOID PAL_BattlePlayerPerformAction(WORD wPlayerIndex)
 				else
 				{
 					g_Battle.iHidingTime *= 1.2;
-				}
+			}
 #endif
 				PAL_BattleBackupScene();
 				PAL_BattleMakeScene();
 				PAL_BattleFadeScene();
-			}
+		}
 
 			PAL_BattleUpdateFighters();
 			PAL_BattleDisplayStatChange();
@@ -4303,13 +4305,13 @@ static BOOL PAL_New_IfEnemyCanEscape(WORD wEnemyIndex)
 
 VOID
 PAL_BattleEnemyPerformAction(
-WORD		wEnemyIndex
-)
-/*++
-  功能：    Perform the selected action for a player.
-  参数：    [IN]  wEnemyIndex - the index of the player.
-  返回值：    None.
-  --*/
+	WORD		wEnemyIndex
+	)
+	/*++
+	  功能：    Perform the selected action for a player.
+	  参数：    [IN]  wEnemyIndex - the index of the player.
+	  返回值：    None.
+	  --*/
 {
 	int        str, def, iCoverIndex, i, x, y, ex, ey, iSound;
 	SHORT      sElementalResistance[NUM_MAGIC_ELEMENTAL];
@@ -4654,7 +4656,7 @@ WORD		wEnemyIndex
 					{
 						g_Battle.rgPlayer[x].pos =
 							PAL_XY(PAL_X(g_Battle.rgPlayer[x].pos) + (8 >> i),
-							PAL_Y(g_Battle.rgPlayer[x].pos) + (4 >> i));
+								PAL_Y(g_Battle.rgPlayer[x].pos) + (4 >> i));
 					}
 					g_Battle.rgPlayer[x].iColorShift = ((i < 3) ? 6 : 0);
 				}
@@ -4666,7 +4668,7 @@ WORD		wEnemyIndex
 				{
 					g_Battle.rgPlayer[sTarget].pos =
 						PAL_XY(PAL_X(g_Battle.rgPlayer[sTarget].pos) + (8 >> i),
-						PAL_Y(g_Battle.rgPlayer[sTarget].pos) + (4 >> i));
+							PAL_Y(g_Battle.rgPlayer[sTarget].pos) + (4 >> i));
 				}
 				g_Battle.rgPlayer[sTarget].iColorShift = ((i < 3) ? 6 : 0);
 			}
@@ -4865,16 +4867,16 @@ WORD		wEnemyIndex
 		{
 			g_Battle.rgEnemy[wEnemyIndex].pos =
 				PAL_XY(PAL_X(g_Battle.rgEnemy[wEnemyIndex].pos) - 10,
-				PAL_Y(g_Battle.rgEnemy[wEnemyIndex].pos) - 8);
+					PAL_Y(g_Battle.rgEnemy[wEnemyIndex].pos) - 8);
 			g_Battle.rgPlayer[iCoverIndex].pos =
 				PAL_XY(PAL_X(g_Battle.rgPlayer[iCoverIndex].pos) + 4,
-				PAL_Y(g_Battle.rgPlayer[iCoverIndex].pos) + 2);
+					PAL_Y(g_Battle.rgPlayer[iCoverIndex].pos) + 2);
 		}
 		else
 		{
 			g_Battle.rgPlayer[sTarget].pos =
 				PAL_XY(PAL_X(g_Battle.rgPlayer[sTarget].pos) + 8,
-				PAL_Y(g_Battle.rgPlayer[sTarget].pos) + 4);
+					PAL_Y(g_Battle.rgPlayer[sTarget].pos) + 4);
 		}
 
 		PAL_BattleDelay(1, 0, FALSE);
@@ -4893,7 +4895,7 @@ WORD		wEnemyIndex
 		{
 			g_Battle.rgPlayer[sTarget].pos =
 				PAL_XY(PAL_X(g_Battle.rgPlayer[sTarget].pos) + 2,
-				PAL_Y(g_Battle.rgPlayer[sTarget].pos) + 1);
+					PAL_Y(g_Battle.rgPlayer[sTarget].pos) + 1);
 		}
 
 		PAL_BattleDelay(3, 0, FALSE);
@@ -4920,7 +4922,7 @@ WORD		wEnemyIndex
 		}
 
 		PAL_BattlePostActionCheck(TRUE);
-	}
+		}
 
 end:
 #ifndef PAL_CLASSIC
@@ -4962,19 +4964,19 @@ end:
 	i = 0; // do nothing
 #endif
 
-}
+	}
 
 VOID
 PAL_BattleStealFromEnemy(
-WORD		wTarget,
-WORD		wStealRate
-)
-/*++
-  功能：    Steal from the enemy.
-  参数：    [IN]  wTarget - the target enemy index.
-  [IN]		wStealRate - the rate of successful theft.
-  返回值：    None.
-  --*/
+	WORD		wTarget,
+	WORD		wStealRate
+	)
+	/*++
+	  功能：    Steal from the enemy.
+	  参数：    [IN]  wTarget - the target enemy index.
+	  [IN]		wStealRate - the rate of successful theft.
+	  返回值：    None.
+	  --*/
 {
 	int   iPlayerIndex = g_Battle.wMovingPlayerIndex;
 	int   offset, x, y, i;
@@ -5054,25 +5056,25 @@ WORD		wStealRate
 #else
 			PAL_BattleUIShowText(s, 800);
 #endif
+		}
 	}
-}
 }
 
 VOID
 PAL_BattleSimulateMagic(
-SHORT		sTarget,
-WORD		wMagicObjectID,
-WORD		wBaseDamage,
-BOOL		fIncludeMagicDamage
-)
-/*++
-  功能：  Simulate a magic for players. Mostly used in item throwing script.
-  参数：
-  [IN]  sTarget - the target enemy index. -1 = all enemies.
-  [IN]  wMagicObjectID - the object ID of the magic to be simulated.
-  [IN]  wBaseDamage - the base damage of the simulation.
-  返回值：  None.
-  --*/
+	SHORT		sTarget,
+	WORD		wMagicObjectID,
+	WORD		wBaseDamage,
+	BOOL		fIncludeMagicDamage
+	)
+	/*++
+	  功能：  Simulate a magic for players. Mostly used in item throwing script.
+	  参数：
+	  [IN]  sTarget - the target enemy index. -1 = all enemies.
+	  [IN]  wMagicObjectID - the object ID of the magic to be simulated.
+	  [IN]  wBaseDamage - the base damage of the simulation.
+	  返回值：  None.
+	  --*/
 {
 	WORD	wMagicDamage, wMagicNumber;
 
@@ -5108,15 +5110,15 @@ BOOL		fIncludeMagicDamage
 		PAL_New_ApplyMagicDamageToEnemy(sTarget, wBaseDamage, wMagicObjectID, FALSE);
 	}
 	gpGlobals->g.lprgMagic[wMagicNumber].wBaseDamage = wMagicDamage;
-	}
+}
 
 VOID
 PAL_New_ApplyMagicDamageToEnemy(
-SHORT		sTarget,
-WORD		wBaseDamage,
-WORD		wMagicObjectID,
-BOOL		fOneDamageAtLeast
-)
+	SHORT		sTarget,
+	WORD		wBaseDamage,
+	WORD		wMagicObjectID,
+	BOOL		fOneDamageAtLeast
+	)
 {
 	INT		iDamage;
 	int     i, j;

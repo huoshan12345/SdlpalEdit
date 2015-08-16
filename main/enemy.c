@@ -148,12 +148,20 @@ Return value:    None.
 			}
 			switch (wPoisonLevel)
 			{
+				case 0:
+				case 1:
+				case 2:
+					g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonIntensity =
+						min(g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonIntensity, 4);
+					break;
+
 				case 3:
 					g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonIntensity =
 						min(g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonIntensity, 2);
+
 				default:
-					g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonIntensity =
-						min(g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonIntensity, 4);
+					g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonIntensity = 
+						min(g_Battle.rgEnemy[wEnemyIndex].rgPoisons[j].wPoisonIntensity, 1);
 					break;
 			}
 #endif
