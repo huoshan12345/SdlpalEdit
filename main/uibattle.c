@@ -763,7 +763,7 @@ VOID
 	s_iFrame++;
 
 #ifdef SHOW_DATA_IN_BATTLE
-	if (gpGlobals->fShowDataInBattle)
+	if (gpGlobals->fShowDataInBattle && g_Battle.BattleResult == kBattleResultOnGoing)
 	{
 		PAL_New_BattleUIShowData();
 	}

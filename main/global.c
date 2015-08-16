@@ -955,7 +955,7 @@ VOID PAL_AddPoisonForPlayer(
 	{
 		// already poisoned
 #ifdef POISON_STATUS_EXPAND // 增加毒的烈度
-		INT iSuccessRate = 80;
+		INT iSuccessRate = 100;
 		iSuccessRate -= wPoisonLevel * 20;
 		iSuccessRate = max(iSuccessRate, 0);
 		//iSuccessRate *= (100 - PAL_GetPlayerPoisonResistance(wPlayerRole)) / 100.0;
@@ -968,17 +968,17 @@ VOID PAL_AddPoisonForPlayer(
 			case 0:
 			case 1:
 				gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity =
-					min(gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity, 12);
+					min(gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity, 3);
 				break;
 
 			case 2:
 				gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity =
-					min(gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity, 8);
+					min(gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity, 2);
 				break;
 
 			case 3:
 				gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity =
-					min(gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity, 4);
+					min(gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity, 1);
 			default:
 				gpGlobals->rgPoisonStatus[iPoisonIndex][index].wPoisonIntensity = 0;
 				break;

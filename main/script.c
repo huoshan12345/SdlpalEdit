@@ -1896,7 +1896,7 @@ WORD           wEventObjectID
 			作用:		吸取选定对象"参数0"点生命，用于补充动作对象的体力
 			*/
 		{
-			SHORT sDamage = min((SHORT)pScript->rgwOperand[0], g_Battle.rgEnemy[wEventObjectID].dwActualHealth);
+			SHORT sDamage = min(max(0, (SHORT)pScript->rgwOperand[0]), g_Battle.rgEnemy[wEventObjectID].dwActualHealth);
 			g_Battle.rgEnemy[wEventObjectID].dwActualHealth -= sDamage;
 
 			if (g_Battle.fPlayerMoving)

@@ -1472,8 +1472,8 @@ VOID PAL_BattleStartFrame(VOID)
 
 						iExtraPoisonDamage = max(iExtraPoisonDamage, 0);
 						iExtraPoisonMPDamage = max(iExtraPoisonMPDamage, 0);
-						iExtraPoisonDamage *= gpGlobals->rgPoisonStatus[j][i].wPoisonIntensity / 4.0;
-						iExtraPoisonMPDamage *= gpGlobals->rgPoisonStatus[j][i].wPoisonIntensity / 4.0;
+						iExtraPoisonDamage *= gpGlobals->rgPoisonStatus[j][i].wPoisonIntensity;
+						iExtraPoisonMPDamage *= gpGlobals->rgPoisonStatus[j][i].wPoisonIntensity;
 						iExtraPoisonDamage = min(iExtraPoisonDamage, MAX_DAMAGE);
 						iExtraPoisonMPDamage = min(iExtraPoisonMPDamage, MAX_DAMAGE);
 						PAL_IncreaseHPMP(wPlayerRole, -(SHORT)iExtraPoisonDamage, -(SHORT)iExtraPoisonMPDamage);
